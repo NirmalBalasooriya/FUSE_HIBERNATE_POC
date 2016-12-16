@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-SymbolicName: persistance
 Built-By: nirma
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1481852881269
+Bnd-LastModified: 1481853888707
 Import-Package: META-INF.com.vcc.poc.model,com.mysql.jdbc,com.vcc.poc.
  dao,com.vcc.poc.model,org.apache.commons.dbcp,org.apache.commons.logg
  ing,org.hibernate;version="4.2",org.hibernate.internal,org.springfram

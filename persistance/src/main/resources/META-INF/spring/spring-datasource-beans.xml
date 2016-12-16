@@ -35,8 +35,8 @@
 	<context:annotation-config />
 	<context:property-placeholder properties-ref="preProps" />	
 	
-		<tx:annotation-driven transaction-manager="transactionManager"/>
-	<context:component-scan base-package="com.mmycompany" />
+	<!-- <tx:annotation-driven transaction-manager="transactionManager"/>
+	<context:component-scan base-package="com/vcc/poc/model" /> -->
 	
 	<!--  DB connection and persistence layer -->
 	<!--  DataSource Definition  -->
