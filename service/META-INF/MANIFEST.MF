@@ -6,7 +6,7 @@ Bundle-Name: service
 Bundle-Version: 0.0.1.SNAPSHOT
 Built-By: nirma
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1481841867962
+Bnd-LastModified: 1482100216212
 Import-Package: META-INF.wsdl,com.vcc.poc.dao,com.vcc.poc.model,com.vc
  c.poc.service;version="0.0",javax.jws,javax.jws.soap,javax.transactio
  n,javax.xml.bind,javax.xml.bind.annotation,javax.xml.namespace,javax.

@@ -1,29 +1,35 @@
 package com.vcc.poc.model;
 
-import java.io.Serializable;
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import org.apache.camel.dataformat.bindy.annotation.DataField;
 
-public class Student  extends Abstract implements Serializable{
-	private static final long serialVersionUID = 1L;
+@Entity
+@Table(name="student")
+public class Student{
 
-    private long studentId;
+    @Id
+    @GeneratedValue
+    @Column(name="STUDENT_ID", nullable = false)
+    private int studentId;
 
-    @DataField(pos = 1)
+    @Column(name="STUDENT_REF", nullable = true, length = 55)
     private String studentRef;
 
-    @DataField(pos = 3)
+    @Column(name="GIVEN_NAME", nullable = true, length = 35)
     private String givenName;
 
-    @DataField(pos = 4)
+    @Column(name="FAMILY_NAME", nullable = true, length = 35)
     private String familyName;
     
-    public long getStudentId() {
+    public int getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(long incidentId) {
+    public void setStudentId(int incidentId) {
         this.studentId = incidentId;
     }
 
@@ -49,5 +55,33 @@ public class Student  extends Abstract implements Serializable{
 
     public void setFamilyName(String familyName) {
         this.familyName = familyName;
+    }
+    
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + studentId;
+        //result = prime * result + ((ssn == null) ? 0 : ssn.hashCode());
+        return result;
+    }
+ 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (!(obj instanceof Student))
+            return false;
+        Student other = (Student) obj;
+        if (studentId != other.studentId)
+            return false;
+        return true;
+    }
+    
+    @Override
+    public String toString(){
+    	return givenName+" "+familyName+" ";
     }
 }

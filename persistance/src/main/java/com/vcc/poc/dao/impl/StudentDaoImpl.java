@@ -8,6 +8,8 @@
 		import org.hibernate.Query;
 		import org.hibernate.SessionFactory;
 		import org.hibernate.internal.SessionImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.vcc.poc.dao.StudentDao;
@@ -25,11 +27,11 @@ import com.vcc.poc.dao.StudentDao;
 		
 		    /** The Constant findStudentByReference. */
 		    private final static String findStudentByReference =
-		        "select i from Student as i where i.studentRef = :ref";
-		
+		       //  "select i from Student as i where i.studentRef = :ref";
+		    		"select Student student from Student where student.studentRef = :ref";		
 		    /** The Constant findStudent. */
 		    private final static String findStudent =
-		        "select i from Student as i";
+		        "select Student student from Student";
 		    
 		    /**
 		     * Sets the session factory.
@@ -51,8 +53,8 @@ import com.vcc.poc.dao.StudentDao;
 		    {
 		
 		        // Prepare query
-		        q = this.sessionFactory.getCurrentSession().createQuery( findStudent );
-		
+		        //q = this.sessionFactory.getCurrentSession().createQuery( findStudent );
+		        q=this.sessionFactory.getCurrentSession().createQuery("FROM Student ");
 		        // Retrieve the Incidents from database
 		        List<Student> list = q.list();
 		
@@ -79,7 +81,7 @@ import com.vcc.poc.dao.StudentDao;
 			public void saveStudent(Student Student)
 		    {
 		    	SessionImpl session = (SessionImpl) this.sessionFactory.getCurrentSession();
-		        this.sessionFactory.getCurrentSession().saveOrUpdate( Student );
+		        this.sessionFactory.getCurrentSession().persist(Student);
 		    }
 			
 			

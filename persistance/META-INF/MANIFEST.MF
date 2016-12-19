@@ -2,12 +2,12 @@ Manifest-Version: 1.0
 Bundle-SymbolicName: persistance
 Built-By: nirma
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1481853888707
+Bnd-LastModified: 1482100198235
 Import-Package: META-INF.com.vcc.poc.model,com.mysql.jdbc,com.vcc.poc.
  dao,com.vcc.poc.model,org.apache.commons.dbcp,org.apache.commons.logg
  ing,org.hibernate;version="4.2",org.hibernate.internal,org.springfram
- ework.jdbc.support;version="2.5",org.springframework.orm.hibernate4,o
- rg.springframework.transaction.annotation;version="2.5"
+ ework.orm.hibernate4,org.springframework.transaction.annotation;versi
+ on="2.5"
 DynamicImport-Package: *
 Tool: Bnd-0.0.357
 Export-Package: com.vcc.poc.dao;uses:="com.vcc.poc.model,org.springfra

@@ -1,16 +1,14 @@
 Manifest-Version: 1.0
 Export-Package: META-INF.com.vcc.poc.model,com.vcc.poc.model;uses:="or
- g.apache.commons.lang.builder,org.apache.camel.dataformat.bindy.annot
- ation"
+ g.apache.commons.lang.builder,javax.persistence"
 Bundle-SymbolicName: model
 Bundle-Name: model
 Bundle-Version: 0.0.1.SNAPSHOT
 Built-By: nirma
 Bundle-ManifestVersion: 2
-Bnd-LastModified: 1481841841187
-Import-Package: META-INF.com.vcc.poc.model,com.vcc.poc.model,org.apach
- e.camel.dataformat.bindy.annotation;version="2.2",org.apache.commons.
- lang.builder;version="2.4"
+Bnd-LastModified: 1482100189380
+Import-Package: META-INF.com.vcc.poc.model,com.vcc.poc.model,javax.per
+ sistence,org.apache.commons.lang.builder;version="2.4"
 Created-By: Apache Maven Bundle Plugin
 Tool: Bnd-0.0.357
 Build-Jdk: 1.8.0_111

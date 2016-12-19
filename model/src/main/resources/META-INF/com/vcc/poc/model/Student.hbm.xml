@@ -17,8 +17,8 @@
 -->
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
                                    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<hibernate-mapping schema="REPORT">
-	<class name="com.vcc.poc.model.Student" table="T_INCIDENT">
+<hibernate-mapping schema="demo">
+	<class name="com.vcc.poc.model.Student" table="student">
 		<meta attribute="extends">Abstract</meta>
 		<id name="studentId" column="STUDENT_ID"  type="long">
 			<generator class="native" />

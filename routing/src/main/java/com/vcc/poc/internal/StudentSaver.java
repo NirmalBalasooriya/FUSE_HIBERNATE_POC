@@ -15,13 +15,14 @@ public class StudentSaver   implements Processor{
 	@Override
 	public void process(Exchange exchange) throws ParseException{
 		Student student=new Student();
-		student.setStudentId(1);
-		student.setGivenName("Nirmal");
-		student.setFamilyName("Balasooriya");
-		//studentService.saveStudent(student);
-		student=studentService.getStudent(1);
-		
-		exchange.getOut().setBody("MY Content!!!"+student.toString());
+		//student.setStudentId(3);
+		student.setStudentRef("V_REF");
+		student.setGivenName("VCC");
+		student.setFamilyName("TEST");
+		studentService.saveStudent(student);
+		//student=studentService.findStudent().get(1);
+		student=studentService.getStudent(2);
+		exchange.getOut().setBody("MY Content!!!"+ (student ==null?"Null student":student.toString()));
 	}
 
 	public void setStudentService(StudentService studentService) {
